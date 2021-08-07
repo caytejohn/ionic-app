@@ -1,0 +1,55 @@
+.title {
+  font-size: 11px;
+}
+
+.info-img {
+  max-height: 30vh;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.game-title {
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 13px;
+  text-align: center;
+}
+
+.text-color {
+  color: #116611;
+}
+
+.website {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  * {
+    text-align: center;
+  }
+  .info-img {
+    width: 30rem;
+  }
+  ion-card-subtitle {
+    border: 1px solid black;
+    border-radius: 10%;
+    width: 30rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  ion-title {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .game-title {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+}
