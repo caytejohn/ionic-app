@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title-head">World of Games</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="Search" [(ngModel)]='searchTerm' showCancelButton='focus' animated>
+  </ion-searchbar>
+
+  <ion-item button *ngFor='let game of games | filter:searchTerm' [routerLink]="['/', 'game', game.id]">
+    <ion-thumbnail slot="start">
+      <img src="{{ game.thumbnail }}" alt="games's thumbnails">
+    </ion-thumbnail>
+
+    <ion-label>
+      <h3>{{ game.title }}</h3>
+      <h5>{{ game.genre }}</h5>
+      <h6>{{ game.platform }}</h6>
+    </ion-label>
+
+    <ion-icon slot="end" *ngIf="game.platform == 'PC (Windows)'" name="game-controller"></ion-icon>
+    <ion-icon slot="end" *ngIf="game.platform == 'Web Browser'" name="game-controller"></ion-icon>
+    <ion-icon slot="end" *ngIf="game.platform == 'PC (Windows), Web Browser'" name="game-controller"></ion-icon>
+  </ion-item>
+</ion-content>
