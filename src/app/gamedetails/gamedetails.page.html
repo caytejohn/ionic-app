@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ information?.genre }}</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content padding class="main-container">
+  <ion-card *ngIf="information">
+    <ion-card-header>
+      <ion-card-title class="game-title">
+        {{ information.title }}
+      </ion-card-title>
+
+      <ion-card-subtitle>
+        <h5 class="title">Release Date: </h5>
+        {{ information.release_date }}
+        <h5 class="title">Publisher:</h5>
+        {{ information.publisher }}
+        <h5 class="title">Developer:</h5>
+        {{ information.developer }}
+        <h5 class="title">Platform:</h5>
+        {{ information.platform }}
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <img [src]="information.thumbnail" class="info-img">
+      <h4 class="description">Game Description</h4>
+      <h3 class="description">{{ information.short_description }}</h3>
+    </ion-card-content>
+
+    <ion-button expand="full" color='success'>
+      <ion-icon name="open" slot="start"></ion-icon>
+      <ion-router-link href="{{information?.game_url}}" target='_parent' class="text-color">Official Website
+      </ion-router-link>
+    </ion-button>
+
+    <div class="website">
+      <h6>This is the free to game profile</h6>
+      <ion-router-link href="{{information?.freetogame_profile_url}}" target='_parent'>Free to Game
+        Profile
+      </ion-router-link>
+    </div>
+  </ion-card>
+
+  <ion-footer mode='md'>
+    <ion-toolbar>
+      <ion-title class="footer-title">&copy; FreeToGame.com & Rapid API </ion-title>
+      <ion-title class="footer-title"> Made by CJ Castillo </ion-title>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
