@@ -1,4 +1,4 @@
-# Ionic Demo Application
+# Ionic Application
 
 This project was generated with [Ionic CLI](https://ionicframework.com/docs/intro/cli) version 6.16.3.
 
